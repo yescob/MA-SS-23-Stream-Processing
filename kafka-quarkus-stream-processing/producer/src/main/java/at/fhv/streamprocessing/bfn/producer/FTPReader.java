@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.util.HashMap;
 import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.net.ftp.FTP;
@@ -23,6 +24,8 @@ public class FTPReader {
 
     @Inject
     Producer producer;
+
+    private final HashMap<String, Integer> fileLines = new HashMap<>();
 
     public void getFile() {
       String server = "ftp.ncdc.noaa.gov";
@@ -82,9 +85,16 @@ public class FTPReader {
             BufferedReader is = new BufferedReader(new InputStreamReader(new GZIPInputStream(inputStream)));
 
             String line;
-            while ((line = is.readLine()) != null)
-              producer.sendToKafka(line);
-            
+            int lineCount = 0;
+            int skipLines = fileLines.get(remoteFile2) != null ? fileLines.get(remoteFile2) : 0;
+            while ((line = is.readLine()) != null) {
+                if (skipLines <= lineCount) {
+                    producer.sendToKafka(line);
+                }
+                lineCount++;
+            }
+
+            fileLines.put(remoteFile2, lineCount);
             is.close();
    
             success = ftpClient.completePendingCommand();
