@@ -4,7 +4,6 @@ import org.eclipse.microprofile.reactive.messaging.Channel;
 import org.eclipse.microprofile.reactive.messaging.Emitter;
 import org.eclipse.microprofile.reactive.messaging.Incoming;
 
-import at.fhv.streamprocessing.bfn.aggregator.model.SumAggregation;
 import io.smallrye.reactive.messaging.annotations.Broadcast;
 import io.smallrye.reactive.messaging.kafka.Record;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -38,13 +37,8 @@ public class Consumer {
     }
 
     @Incoming("temperatures-aggregated")
-    public void consume2(Record<String,SumAggregation> record) {
-        System.out.println(record.value());
-    }
-
-    @Incoming("temperature-year")
-    public void consume3(Record<String,Integer> record) {
-        System.out.println(record.value());
+    public void consume2(Record<String,Integer> record) {
+        System.out.println(record.key() + ": " +record.value());
     }
     
 }
