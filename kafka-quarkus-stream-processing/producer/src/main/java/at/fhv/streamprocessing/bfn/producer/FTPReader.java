@@ -15,9 +15,16 @@ import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
 
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+
+@ApplicationScoped
 public class FTPReader {
 
-    static void getFile() {
+    @Inject
+    Producer producer;
+
+    public void getFile() {
       String server = "ftp.ncdc.noaa.gov";
       // generally ftp port is 21
        int port = 21;
@@ -57,15 +64,15 @@ public class FTPReader {
 
            FTPFile[] files = ftpClient.listFiles();
 
-           for (FTPFile file : files) {
-            String details = file.getName();
-            if (file.isDirectory()) {
-                details = "[" + details + "]";
-            }
-            details += "\t\t" + file.getSize();
+        //    for (FTPFile file : files) {
+        //     String details = file.getName();
+        //     if (file.isDirectory()) {
+        //         details = "[" + details + "]";
+        //     }
+        //     details += "\t\t" + file.getSize();
  
-            System.out.println(details);
-        }
+        //     System.out.println(details);
+        //     }
 
            ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
             // APPROACH #2: using InputStream retrieveFileStream(String)
@@ -76,7 +83,7 @@ public class FTPReader {
 
             String line;
             while ((line = is.readLine()) != null)
-              System.out.println("Read: " + line);
+              producer.sendToKafka(line);
             
             is.close();
    

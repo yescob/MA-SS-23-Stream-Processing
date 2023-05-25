@@ -11,12 +11,15 @@ import jakarta.ws.rs.core.Response.Status;
 @Path("/")
 public class RestEnpoint {
 
+    @Inject
+    FTPReader reader;
+
     String filePath = "pub/data/noaa/2023/"; 
     String fileName = "010010-99999-2023.gz";
 
     @GET
     public void test(){
-        FTPReader.getFile();
+        reader.getFile();
     }
     
 }
