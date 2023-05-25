@@ -29,7 +29,6 @@ public class TopologyProducer {
     private static final String TEMPERATURE_VALUES_TOPIC = "temperature-values";
     private static final String TEMPERATURES_AGGREGATED_TOPIC = "temperatures-aggregated";
 
-    @Produces
     public Topology buildTopology() {
         StreamsBuilder builder = new StreamsBuilder();
 

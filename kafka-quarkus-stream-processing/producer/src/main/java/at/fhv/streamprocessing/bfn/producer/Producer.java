@@ -6,6 +6,8 @@ import org.eclipse.microprofile.reactive.messaging.Channel;
 import org.eclipse.microprofile.reactive.messaging.Emitter;
 import org.jboss.logging.Logger;
 
+import io.smallrye.reactive.messaging.kafka.Record;
+
 /**
  * A bean producing random temperature data every second.
  * The values are written to a Kafka topic (temperature-values).
@@ -19,10 +21,10 @@ public class Producer {
 
     @Inject
     @Channel("temperature-records")
-    Emitter<String> priceEmitter;
+    Emitter<Record<Integer, String>> priceEmitter;
                                     
     public void sendToKafka(String record) {
-        priceEmitter.send(record);
+        priceEmitter.send(Record.of(1,record));
         LOG.info("Record send to Kafka: " + record);
     }
 }
