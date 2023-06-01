@@ -35,12 +35,14 @@ public class TemperatureTopologyProducer {
     private static final String TEMPERATURE_VALUES_TOPIC = "temperature-year";
     private static final String TEMPERATURES_AGGREGATED_TOPIC = "temperatures-aggregated";
 
-
     @Produces
     public Topology buildTopology() {
         StreamsBuilder builder = new StreamsBuilder();
 
         builder.stream(TEMPERATURE_VALUES_TOPIC, Consumed.with(Serdes.String(), Serdes.Integer()))
+        .groupByKey()
+        .reduce(Integer::sum)
+        .toStream()
         .to(                                                          
             TEMPERATURES_AGGREGATED_TOPIC,
             Produced.with(Serdes.String(), Serdes.Integer())
