@@ -88,10 +88,10 @@ public class FTPReader {
             int lineCount = 0;
             int skipLines = fileLines.get(remoteFile2) != null ? fileLines.get(remoteFile2) : 0;
             while ((line = is.readLine()) != null) {
-                if (skipLines <= lineCount) {
+                // if (skipLines <= lineCount) {
                     producer.sendToKafka(line);
-                }
-                lineCount++;
+                // }
+                // lineCount++;
             }
 
             fileLines.put(remoteFile2, lineCount);
