@@ -28,6 +28,14 @@ public class Consumer {
     public void consume2(Record<String,Integer> record) {
         System.out.println(record.key() + ": " +record.value());
     }
+    @Incoming("temperatures-max")
+    public void consume3(Record<String,Integer> record) {
+        System.out.println(record.key() + ": " +record.value());
+    }
+    @Incoming("days-over-thirty")
+    public void consume4(Record<Integer,OverThirtyCount> record) {
+        System.out.println(record.key() + ": " +record.value().count);
+    }
 
 
     

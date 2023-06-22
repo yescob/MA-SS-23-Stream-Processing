@@ -7,22 +7,22 @@ public class NOAARecord {
     private static final Integer START_POSITION_YEAR = 16;
     private static final Integer END_POSITION_YEAR = 19;
     private static final Integer START_POSITION_MONTH = 20;
-    private static final Integer END_POSITION_MONTH = 22;
-    private static final Integer START_POSITION_DAY = 23;
-    private static final Integer END_POSITION_DAY = 25;
+    private static final Integer END_POSITION_MONTH = 21;
+    private static final Integer START_POSITION_DAY = 22;
+    private static final Integer END_POSITION_DAY = 23;
     private static final Integer START_POSITION_TEMPERATURE = 88;
     private static final Integer END_POSITION_TEMPERATURE = 92;
     private static final Integer POSITION_QUALITY_CODE = 93;
-    private static final Integer MISSING_VALUE = 9999;
-    private static final String ALLOWED_QUALITY_NUMBERS_REGEX = "[01459]";
+    public static final Integer MISSING_VALUE = 9999;
+    public static final String ALLOWED_QUALITY_NUMBERS_REGEX = "[01459]";
 
     
-    private String stationID;
-    private String year;
-    private String month;
-    private String day;
-    private Integer temperature;
-    private String qualityRecord;
+    public String stationID;
+    public String year;
+    public String month;
+    public String day;
+    public Integer temperature;
+    public String qualityRecord;
 
     public NOAARecord(){}
 
