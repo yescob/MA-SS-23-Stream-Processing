@@ -26,15 +26,19 @@ public class Consumer {
 
     @Incoming("temperatures-aggregated")
     public void consume2(Record<String,Integer> record) {
-        System.out.println(record.key() + ": " +record.value());
+        System.out.println("Temperatures aggregated: " + record.value());
     }
     @Incoming("temperatures-max")
     public void consume3(Record<String,Integer> record) {
-        System.out.println(record.key() + ": " +record.value());
+        System.out.println("Max Temperatures: " + record.value());
     }
     @Incoming("days-over-thirty")
     public void consume4(Record<Integer,OverThirtyCount> record) {
-        System.out.println(record.key() + ": " +record.value().count);
+        System.out.println("Days where Temp is >30: " + record.value().count);
+    }
+    @Incoming("summary-statistics")
+    public void consume5(Record<Integer,MedianPercentile> record) {
+        System.out.println(record.value().summaryStatistics);
     }
 
 
