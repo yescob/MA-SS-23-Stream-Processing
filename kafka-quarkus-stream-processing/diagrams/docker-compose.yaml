@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  structurizr:
+    image: structurizr/lite
+    ports:
+      - "8091:8080"
+    volumes:
+      - type: bind
+        source: "data"
+        target: "/usr/local/structurizr"

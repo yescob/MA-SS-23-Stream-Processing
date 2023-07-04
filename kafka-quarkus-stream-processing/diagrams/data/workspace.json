@@ -1,0 +1,472 @@
+{
+  "id" : 1,
+  "name" : "Name",
+  "description" : "Description",
+  "lastModifiedDate" : "2023-07-04T12:44:49Z",
+  "lastModifiedAgent" : "structurizr-javascript",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgICAgIHJvb3RfcHJvZHVjZXIgPSBzb2Z0d2FyZVN5c3RlbSAiUHJvZHVjZXIiICJQcm9kdWNlcyBkYXRhIGZvciB0aGUgc3lzdGVtIiAiUHJvZHVjZXIiCiAgICAgICAgICAgIGZ0cFNlcnZlciA9IHNvZnR3YXJlU3lzdGVtICJGVFAgU2VydmVyIiAiUHJvdmlkZXMgdGhlIGRhdGEgdGhyb3VnaCBGVFAiICJTZXJ2ZXIiCiAgICAgICAgICAgIHN0b3JhZ2VTeXN0ZW0gPSBzb2Z0d2FyZVN5c3RlbSAiUHJvZ3Jlc3MgU3RvcmFnZSIgIlN0b3JlcyB0aGUgYWxyZWFkeSBwcm9jZXNzZWQgZGF0YSIgIkRhdGFiYXNlIgogICAgICAgICAgICBrYWZrYVBpcGVSYXdEYXRhID0gc29mdHdhcmVTeXN0ZW0gIkthZmthIFBpcGUiICJJbmdlc3RzIGFuZCBwcm9jZXNzZXMgcmF3IGRhdGEgdXNpbmcgS2Fma2EiICJLYWZrYSIKICAgICAgICAgICAgUmF3Q29uc3VtZXJBbmRDdXN0b21Ub3BpY1Byb2R1Y2VyID0gc29mdHdhcmVTeXN0ZW0gIkNvbnN1bWVyIC8gUHJvZHVjZXIiICJDb25zdW1lcyByYXcgZGF0YSBhbmQgcHJvZHVjZXMgY3VzdG9taXplZCBpbmZvcm1hdGlvbiIgIlByb2R1Y2VyIgogICAgICAgICAgICBrYWZrYVRvcGljWWVhclRlbXAgPSBzb2Z0d2FyZVN5c3RlbSAiWWVhciBUZW1wIFRvcGljIiAiQ29sbGVjdHMgdG9waWMgaW5mb3JtYXRpb24gcmVsYXRlZCB0byB0ZW1wZXJhdHVyZSBkYXRhIiAiS2Fma2EiCiAgICAgICAgICAgIGthZmthVG9waWNPdGhlciA9IHNvZnR3YXJlU3lzdGVtICJPdGhlciBUb3BpYyIgIkNvbGxlY3RzIHRvcGljIGluZm9ybWF0aW9uIGZvciBjdXN0b20gZGF0YSIgIkthZmthIgogICAgICAgICAgICB5ZWFyVGVtcFRvcGljU3RyZWFtUHJvY2Vzc2luZyA9IHNvZnR3YXJlU3lzdGVtICJTdHJlYW0gUHJvY2Vzc2luZyBTeXN0ZW0gZm9yIFllYXIgVGVtcCBUb3BpYyIgIlByb2Nlc3NlcyBkYXRhIHJlbGF0ZWQgdG8gdGVtcGVyYXR1cmUgdG9waWMiICJQcm9kdWNlciIKICAgICAgICAgICAgb3RoZXJUb3BpY1N0cmVhbVByb2Nlc3NpbmcgPSBzb2Z0d2FyZVN5c3RlbSAiU3RyZWFtIFByb2Nlc3NpbmcgU3lzdGVtIGZvciBPdGhlciBUb3BpYyIgIlByb2Nlc3NlcyBkYXRhIHJlbGF0ZWQgdG8gdGhlIGN1c3RvbSB0b3BpYyIgIlByb2R1Y2VyIgogICAgCiAgICAgICAgICAgIHJvb3RfcHJvZHVjZXIgLT4gZnRwU2VydmVyICJBY2Nlc3NlcyBGaWxlcyIKICAgICAgICAgICAgcm9vdF9wcm9kdWNlciAtPiBzdG9yYWdlU3lzdGVtICJTdG9yZXMgUHJvZ3Jlc3MgRGF0YSIKICAgICAgICAgICAgcm9vdF9wcm9kdWNlciAtPiBrYWZrYVBpcGVSYXdEYXRhICJQdWJsaXNoZXMgUmF3IERhdGEiCiAgICAgICAgICAgIGthZmthUGlwZVJhd0RhdGEgLT4gUmF3Q29uc3VtZXJBbmRDdXN0b21Ub3BpY1Byb2R1Y2VyICJDb25zdW1lcyBSYXcgRGF0YSIKICAgICAgICAgICAgUmF3Q29uc3VtZXJBbmRDdXN0b21Ub3BpY1Byb2R1Y2VyIC0+IGthZmthVG9waWNZZWFyVGVtcCAiUHVibGlzaGVzIEN1c3RvbWl6ZWQgSW5mb3JtYXRpb24gZm9yIFllYXIgVGVtcCBUb3BpYyIKICAgICAgICAgICAgUmF3Q29uc3VtZXJBbmRDdXN0b21Ub3BpY1Byb2R1Y2VyIC0+IGthZmthVG9waWNPdGhlciAiUHVibGlzaGVzIEN1c3RvbWl6ZWQgSW5mb3JtYXRpb24gZm9yIE90aGVyIFRvcGljIgogICAgICAgICAgICBrYWZrYVRvcGljWWVhclRlbXAgLT4geWVhclRlbXBUb3BpY1N0cmVhbVByb2Nlc3NpbmcgIkNvbnN1bWVzIFllYXIgVGVtcCBEYXRhIgogICAgICAgICAgICBrYWZrYVRvcGljT3RoZXIgLT4gb3RoZXJUb3BpY1N0cmVhbVByb2Nlc3NpbmcgIkNvbnN1bWVzIE90aGVyIFNwZWNpZmljIERhdGEiCiAgICAgICAgfQoKICAgIHZpZXdzIHsKICAgICBzeXN0ZW1Db250ZXh0IHJvb3RfcHJvZHVjZXIgIlJvb3RfUHJvZHVjZXIiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICAgICAgdGl0bGUgIlJvb3QgUHJvZHVjZXIgU3lzdGVtIENvbnRleHQiCiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJUaGUgcm9vdCBwcm9kdWNlciBzeXN0ZW0gYW5kIGl0cyBpbnRlcmFjdGlvbnMgd2l0aCBvdGhlciBzeXN0ZW1zLiIKICAgICAgICB9CiAgICAKICAgICAgICBzeXN0ZW1Db250ZXh0IGthZmthUGlwZVJhd0RhdGEgIlJhd0RhdGFzb3VyY2VLYWZrYVBpcGUiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICAgICAgdGl0bGUgIlJhdyBEYXRhc291cmNlIEthZmthIFBpcGUgU3lzdGVtIENvbnRleHQiCiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJUaGUgS2Fma2EgcGlwZSBmb3IgcmF3IGRhdGEgaW5nZXN0aW9uIGFuZCBwdWJsaXNoaW5nLiIKICAgICAgICB9CiAgICAKICAgICAgICBzeXN0ZW1Db250ZXh0IFJhd0NvbnN1bWVyQW5kQ3VzdG9tVG9waWNQcm9kdWNlciAiUmF3Q29uc3VtZXJBbmRDdXN0b21Ub3BpY1Byb2R1Y2VyIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgICAgIHRpdGxlICJSYXcgQ29uc3VtZXIgLyBDdXN0b20gVG9waWMgUHJvZHVjZXIgU3lzdGVtIENvbnRleHQiCiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJUaGUgc3lzdGVtIHJlc3BvbnNpYmxlIGZvciBjb25zdW1pbmcgcmF3IGRhdGEgYW5kIHByb2R1Y2luZyBjdXN0b21pemVkIGluZm9ybWF0aW9uLiIKICAgICAgICB9CiAgICAKICAgICAgICBzeXN0ZW1Db250ZXh0IGthZmthVG9waWNZZWFyVGVtcCAiS2Fma2FTcGVjaWZpY1RvcGljWWVhclRlbXAiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQKICAgICAgICAgICAgdGl0bGUgIkthZmthIFNwZWNpZmljIFRvcGljIChZZWFyIFRlbXApIFN5c3RlbSBDb250ZXh0IgogICAgICAgICAgICBkZXNjcmlwdGlvbiAiVGhlIHN5c3RlbSByZXNwb25zaWJsZSBmb3IgY29sbGVjdGluZyB0b3BpYyBpbmZvcm1hdGlvbiBmb3IgdGVtcGVyYXR1cmUgZGF0YS4iCiAgICAgICAgfQogICAgCiAgICAgICAgc3lzdGVtQ29udGV4dCBrYWZrYVRvcGljT3RoZXIgIkthZmthU3BlY2lmaWNUb3BpY090aGVyIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgICAgIHRpdGxlICJLYWZrYSBTcGVjaWZpYyBUb3BpYyAoT3RoZXIpIFN5c3RlbSBDb250ZXh0IgogICAgICAgICAgICBkZXNjcmlwdGlvbiAiVGhlIHN5c3RlbSByZXNwb25zaWJsZSBmb3IgY29sbGVjdGluZyB0b3BpYyBpbmZvcm1hdGlvbiBmb3IgY3VzdG9tIGRhdGEuIgogICAgICAgIH0KICAgIAogICAgICAgIHN5c3RlbUxhbmRzY2FwZSAiTGFuZHNjYXBlIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0CiAgICAgICAgICAgIHRpdGxlICJTeXN0ZW0gTGFuZHNjYXBlIgogICAgICAgICAgICBkZXNjcmlwdGlvbiAiVGhlIG92ZXJhbGwgbGFuZHNjYXBlIG9mIHRoZSBzeXN0ZW0gd2l0aCBhbGwgY29tcG9uZW50cyBhbmQgdGhlaXIgaW50ZXJhY3Rpb25zLiIKICAgICAgICB9CiAgICAKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJVc2VyIiB7CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgICAgICBmb250U2l6ZSAyMgogICAgICAgICAgICAgICAgc2hhcGUgUGVyc29uCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgICAgIGZvbnRTaXplIDIyCiAgICAgICAgICAgICAgICBzaGFwZSBDeWxpbmRlcgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMTE2OGJkCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiS2Fma2EiIHsKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgICAgIGZvbnRTaXplIDIyCiAgICAgICAgICAgICAgICBzaGFwZSBQaXBlCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM0MzhkZDUKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJQcm9kdWNlciIgewogICAgICAgICAgICAgICAgY29sb3IgIzAwMDAwMAogICAgICAgICAgICAgICAgZm9udFNpemUgMjIKICAgICAgICAgICAgICAgIHNoYXBlIEJveAogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjOTFGMTc5CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiU2VydmVyIiB7CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgICAgICBmb250U2l6ZSAyMgogICAgICAgICAgICAgICAgc2hhcGUgRm9sZGVyCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICNFQUNFNkQKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDdXN0b21lciIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjZmYwMDAwCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgfQp9Cg=="
+  },
+  "configuration" : { },
+  "model" : {
+    "softwareSystems" : [ {
+      "id" : "6",
+      "tags" : "Element,Software System,Kafka",
+      "properties" : {
+        "structurizr.dsl.identifier" : "kafkatopicyeartemp"
+      },
+      "name" : "Year Temp Topic",
+      "description" : "Collects topic information related to temperature data",
+      "relationships" : [ {
+        "id" : "16",
+        "tags" : "Relationship",
+        "sourceId" : "6",
+        "destinationId" : "8",
+        "description" : "Consumes Year Temp Data"
+      } ],
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "5",
+      "tags" : "Element,Software System,Producer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "rawconsumerandcustomtopicproducer"
+      },
+      "name" : "Consumer / Producer",
+      "description" : "Consumes raw data and produces customized information",
+      "relationships" : [ {
+        "id" : "15",
+        "tags" : "Relationship",
+        "sourceId" : "5",
+        "destinationId" : "7",
+        "description" : "Publishes Customized Information for Other Topic"
+      }, {
+        "id" : "14",
+        "tags" : "Relationship",
+        "sourceId" : "5",
+        "destinationId" : "6",
+        "description" : "Publishes Customized Information for Year Temp Topic"
+      } ],
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "2",
+      "tags" : "Element,Software System,Server",
+      "properties" : {
+        "structurizr.dsl.identifier" : "ftpserver"
+      },
+      "name" : "FTP Server",
+      "description" : "Provides the data through FTP",
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "3",
+      "tags" : "Element,Software System,Database",
+      "properties" : {
+        "structurizr.dsl.identifier" : "storagesystem"
+      },
+      "name" : "Progress Storage",
+      "description" : "Stores the already processed data",
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "4",
+      "tags" : "Element,Software System,Kafka",
+      "properties" : {
+        "structurizr.dsl.identifier" : "kafkapiperawdata"
+      },
+      "name" : "Kafka Pipe",
+      "description" : "Ingests and processes raw data using Kafka",
+      "relationships" : [ {
+        "id" : "13",
+        "tags" : "Relationship",
+        "sourceId" : "4",
+        "destinationId" : "5",
+        "description" : "Consumes Raw Data"
+      } ],
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "7",
+      "tags" : "Element,Software System,Kafka",
+      "properties" : {
+        "structurizr.dsl.identifier" : "kafkatopicother"
+      },
+      "name" : "Other Topic",
+      "description" : "Collects topic information for custom data",
+      "relationships" : [ {
+        "id" : "17",
+        "tags" : "Relationship",
+        "sourceId" : "7",
+        "destinationId" : "9",
+        "description" : "Consumes Other Specific Data"
+      } ],
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "9",
+      "tags" : "Element,Software System,Producer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "othertopicstreamprocessing"
+      },
+      "name" : "Stream Processing System for Other Topic",
+      "description" : "Processes data related to the custom topic",
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "1",
+      "tags" : "Element,Software System,Producer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "root_producer"
+      },
+      "name" : "Producer",
+      "description" : "Produces data for the system",
+      "relationships" : [ {
+        "id" : "12",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "4",
+        "description" : "Publishes Raw Data"
+      }, {
+        "id" : "11",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "3",
+        "description" : "Stores Progress Data"
+      }, {
+        "id" : "10",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "2",
+        "description" : "Accesses Files"
+      } ],
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "8",
+      "tags" : "Element,Software System,Producer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "yeartemptopicstreamprocessing"
+      },
+      "name" : "Stream Processing System for Year Temp Topic",
+      "description" : "Processes data related to temperature topic",
+      "location" : "Unspecified",
+      "documentation" : { }
+    } ]
+  },
+  "documentation" : { },
+  "views" : {
+    "systemLandscapeViews" : [ {
+      "key" : "Landscape",
+      "order" : 6,
+      "title" : "System Landscape",
+      "description" : "The overall landscape of the system with all components and their interactions.",
+      "dimensions" : {
+        "width" : 2725,
+        "height" : 3100
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "17"
+      }, {
+        "id" : "16"
+      }, {
+        "id" : "15"
+      }, {
+        "id" : "14"
+      }, {
+        "id" : "13"
+      }, {
+        "id" : "11"
+      }, {
+        "id" : "12"
+      }, {
+        "id" : "10"
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 949,
+        "y" : 199
+      }, {
+        "id" : "2",
+        "x" : 199,
+        "y" : 799
+      }, {
+        "id" : "3",
+        "x" : 949,
+        "y" : 799
+      }, {
+        "id" : "4",
+        "x" : 1699,
+        "y" : 799
+      }, {
+        "id" : "5",
+        "x" : 1699,
+        "y" : 1399
+      }, {
+        "id" : "6",
+        "x" : 1324,
+        "y" : 1999
+      }, {
+        "id" : "7",
+        "x" : 2074,
+        "y" : 1999
+      }, {
+        "id" : "8",
+        "x" : 1324,
+        "y" : 2599
+      }, {
+        "id" : "9",
+        "x" : 2074,
+        "y" : 2599
+      } ]
+    } ],
+    "systemContextViews" : [ {
+      "key" : "KafkaSpecificTopicYearTemp",
+      "order" : 4,
+      "title" : "Kafka Specific Topic (Year Temp) System Context",
+      "description" : "The system responsible for collecting topic information for temperature data.",
+      "softwareSystemId" : "6",
+      "dimensions" : {
+        "width" : 1540,
+        "height" : 1900
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "16"
+      }, {
+        "id" : "14"
+      } ],
+      "elements" : [ {
+        "id" : "5",
+        "x" : 545,
+        "y" : 200
+      }, {
+        "id" : "6",
+        "x" : 545,
+        "y" : 800
+      }, {
+        "id" : "8",
+        "x" : 545,
+        "y" : 1400
+      } ]
+    }, {
+      "key" : "Root_Producer",
+      "order" : 1,
+      "title" : "Root Producer System Context",
+      "description" : "The root producer system and its interactions with other systems.",
+      "softwareSystemId" : "1",
+      "dimensions" : {
+        "width" : 2350,
+        "height" : 1300
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "12"
+      }, {
+        "id" : "11"
+      }, {
+        "id" : "10"
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 949,
+        "y" : 200
+      }, {
+        "id" : "2",
+        "x" : 199,
+        "y" : 800
+      }, {
+        "id" : "3",
+        "x" : 949,
+        "y" : 800
+      }, {
+        "id" : "4",
+        "x" : 1699,
+        "y" : 800
+      } ]
+    }, {
+      "key" : "RawConsumerAndCustomTopicProducer",
+      "order" : 3,
+      "title" : "Raw Consumer / Custom Topic Producer System Context",
+      "description" : "The system responsible for consuming raw data and producing customized information.",
+      "softwareSystemId" : "5",
+      "dimensions" : {
+        "width" : 1660,
+        "height" : 1900
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "15"
+      }, {
+        "id" : "14"
+      }, {
+        "id" : "13"
+      } ],
+      "elements" : [ {
+        "id" : "4",
+        "x" : 604,
+        "y" : 200
+      }, {
+        "id" : "5",
+        "x" : 604,
+        "y" : 800
+      }, {
+        "id" : "6",
+        "x" : 229,
+        "y" : 1400
+      }, {
+        "id" : "7",
+        "x" : 979,
+        "y" : 1400
+      } ]
+    }, {
+      "key" : "KafkaSpecificTopicOther",
+      "order" : 5,
+      "title" : "Kafka Specific Topic (Other) System Context",
+      "description" : "The system responsible for collecting topic information for custom data.",
+      "softwareSystemId" : "7",
+      "dimensions" : {
+        "width" : 1440,
+        "height" : 1900
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "17"
+      }, {
+        "id" : "15"
+      } ],
+      "elements" : [ {
+        "id" : "5",
+        "x" : 495,
+        "y" : 200
+      }, {
+        "id" : "7",
+        "x" : 495,
+        "y" : 800
+      }, {
+        "id" : "9",
+        "x" : 495,
+        "y" : 1400
+      } ]
+    }, {
+      "key" : "RawDatasourceKafkaPipe",
+      "order" : 2,
+      "title" : "Raw Datasource Kafka Pipe System Context",
+      "description" : "The Kafka pipe for raw data ingestion and publishing.",
+      "softwareSystemId" : "4",
+      "dimensions" : {
+        "width" : 1200,
+        "height" : 1900
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "13"
+      }, {
+        "id" : "12"
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 375,
+        "y" : 200
+      }, {
+        "id" : "4",
+        "x" : 375,
+        "y" : 800
+      }, {
+        "id" : "5",
+        "x" : 375,
+        "y" : 1400
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "User",
+          "color" : "#ffffff",
+          "fontSize" : 22,
+          "shape" : "Person"
+        }, {
+          "tag" : "Database",
+          "background" : "#1168bd",
+          "color" : "#ffffff",
+          "fontSize" : 22,
+          "shape" : "Cylinder"
+        }, {
+          "tag" : "Kafka",
+          "background" : "#438dd5",
+          "color" : "#ffffff",
+          "fontSize" : 22,
+          "shape" : "Pipe"
+        }, {
+          "tag" : "Producer",
+          "background" : "#91f179",
+          "color" : "#000000",
+          "fontSize" : 22,
+          "shape" : "Box"
+        }, {
+          "tag" : "Server",
+          "background" : "#eace6d",
+          "color" : "#ffffff",
+          "fontSize" : 22,
+          "shape" : "Folder"
+        }, {
+          "tag" : "Customer",
+          "background" : "#ff0000"
+        } ]
+      },
+      "terminology" : { },
+      "metadataSymbols" : "SquareBrackets",
+      "lastSavedView" : "KafkaSpecificTopicOther"
+    }
+  }
+}
