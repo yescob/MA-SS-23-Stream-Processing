@@ -1,5 +1,6 @@
 package at.fhv.streamprocessing.bfn.aggregator;
 
+import org.apache.kafka.streams.kstream.Window;
 import org.eclipse.microprofile.reactive.messaging.Channel;
 import org.eclipse.microprofile.reactive.messaging.Emitter;
 import org.eclipse.microprofile.reactive.messaging.Incoming;
@@ -20,7 +21,7 @@ public class Consumer {
     public void consume(Record<Integer,String> record) {
     
         NOAARecord currentRecord = new NOAARecord(record.value());
-
+    
         nooaEmitter.send(Record.of(currentRecord.getYear(),currentRecord));
     }
 
@@ -40,7 +41,5 @@ public class Consumer {
     public void consume5(Record<Integer,MedianPercentile> record) {
         System.out.println(record.value().summaryStatistics);
     }
-
-
     
 }
