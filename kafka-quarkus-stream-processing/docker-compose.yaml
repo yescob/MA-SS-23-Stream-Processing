@@ -54,6 +54,16 @@ services:
     networks:
       - kafkastreams-network
 
+  aggregator2:
+    image: kafka-streams-aggregator2:1.0
+    build:
+      context: aggregator2
+      dockerfile: src/main/docker/Dockerfile.${QUARKUS_MODE:-jvm}
+    environment:
+      QUARKUS_KAFKA_STREAMS_BOOTSTRAP_SERVERS: kafka:9092
+    networks:
+      - kafkastreams-network
+
 networks:
   kafkastreams-network:
     name: ks

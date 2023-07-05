@@ -1,37 +1,19 @@
 package at.fhv.streamprocessing.bfn.aggregator;
 
-import java.nio.ByteBuffer;
-import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Properties;
-
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Produces;
-import jakarta.inject.Qualifier;
 
-import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.Serdes;
-import org.apache.kafka.common.serialization.Serializer;
 import org.apache.kafka.common.utils.Bytes;
 import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.StreamsBuilder;
-import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.Topology;
-import org.apache.kafka.streams.kstream.Aggregator;
 import org.apache.kafka.streams.kstream.Consumed;
-import org.apache.kafka.streams.kstream.GlobalKTable;
 import org.apache.kafka.streams.kstream.Grouped;
-import org.apache.kafka.streams.kstream.Initializer;
 import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.Materialized;
-import org.apache.kafka.streams.kstream.Named;
 import org.apache.kafka.streams.kstream.Produced;
-import org.apache.kafka.streams.state.KeyValueBytesStoreSupplier;
 import org.apache.kafka.streams.state.KeyValueStore;
-import org.apache.kafka.streams.state.Stores;
-
 import at.fhv.streamprocessing.bfn.aggregator.model.NOAARecord;
 import io.quarkus.kafka.client.serialization.ObjectMapperSerde;
 
@@ -62,7 +44,10 @@ public class TemperatureTopologyProducer {
             .toStream()
             .to(TEMPERATURES_AGGREGATED_TOPIC, Produced.with(Serdes.String(), Serdes.Integer()));
 
-        stream.filter((key, value) -> value.getTemperature().intValue() != NOAARecord.MISSING_VALUE.intValue()
+
+        KStream<String, NOAARecord> stream2 = builder.stream(TEMPERATURE_VALUES_TOPIC, Consumed.with(Serdes.String(), recordSerde));
+
+        stream2.filter((key, value) -> value.getTemperature().intValue() != NOAARecord.MISSING_VALUE.intValue()
                 && String.valueOf(value.getQualityRecord()).matches(NOAARecord.ALLOWED_QUALITY_NUMBERS_REGEX))
             .map((key, value) -> KeyValue.pair(key, value.getTemperature()))
             .groupByKey(Grouped.<String, Integer>as(null)
@@ -79,12 +64,13 @@ public class TemperatureTopologyProducer {
             .to(TEMPERATURES_MAX_TOPIC, Produced.with(Serdes.String(), Serdes.Integer()));
 
 
-        
+        KStream<String, NOAARecord> stream3 = builder.stream(TEMPERATURE_VALUES_TOPIC, Consumed.with(Serdes.String(), recordSerde));
+
         ObjectMapperSerde<OverThirtyCount> aggregationSerde = new ObjectMapperSerde<>(OverThirtyCount.class);
         ObjectMapperSerde<NOAARecord> aggregationSerdeNOAA = new ObjectMapperSerde<>(NOAARecord.class);
 
 
-        stream.filter((key, value) -> value.getTemperature().intValue() != NOAARecord.MISSING_VALUE.intValue()
+        stream3.filter((key, value) -> value.getTemperature().intValue() != NOAARecord.MISSING_VALUE.intValue()
                 && String.valueOf(value.getQualityRecord()).matches(NOAARecord.ALLOWED_QUALITY_NUMBERS_REGEX))
         .map((key, value) -> KeyValue.pair(1, value))
         .groupByKey(Grouped.<Integer, NOAARecord>as(null)
@@ -103,12 +89,12 @@ public class TemperatureTopologyProducer {
 
 
 
-
+        KStream<String, NOAARecord> stream4 = builder.stream(TEMPERATURE_VALUES_TOPIC, Consumed.with(Serdes.String(), recordSerde));
 
         ObjectMapperSerde<NOAARecord> aggregationSerdeNOAA2 = new ObjectMapperSerde<>(NOAARecord.class);
         ObjectMapperSerde<MedianPercentile> medianPercentileSerde = new ObjectMapperSerde<>(MedianPercentile.class);
         // Calculate median and percentiles
-        stream.filter((key, value) -> value.getTemperature().intValue() != NOAARecord.MISSING_VALUE.intValue()
+        stream4.filter((key, value) -> value.getTemperature().intValue() != NOAARecord.MISSING_VALUE.intValue()
                 && String.valueOf(value.getQualityRecord()).matches(NOAARecord.ALLOWED_QUALITY_NUMBERS_REGEX))
             .map((key, value) -> KeyValue.pair(key, value))
             .groupByKey(Grouped.<String, NOAARecord>as(null)
@@ -123,8 +109,8 @@ public class TemperatureTopologyProducer {
             )
             .toStream()
             .to("summary-statistics", Produced.with(Serdes.String(), medianPercentileSerde)); // Use String Serde for summary statistics
-
-        return builder.build();
+        
+            return builder.build();
     }
 
 }

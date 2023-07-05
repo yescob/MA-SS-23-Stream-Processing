@@ -1,7 +1,6 @@
 package at.fhv.streamprocessing.bfn.aggregator;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,7 +15,8 @@ public class OverThirtyCount {
 
         if(record.getTemperature().intValue() >= 82){
 
-            LocalDate currentDate = LocalDate.of(Integer.parseInt(record.getYear()), Integer.parseInt(record.getMonth()),Integer.parseInt(record.getDay()));
+            LocalDate currentDate = LocalDate.of(Integer.parseInt(record.getYear()), 
+            Integer.parseInt(record.getMonth()),Integer.parseInt(record.getDay()));
 
             if(!alreadyCountedDates.contains(currentDate)){
                 alreadyCountedDates.add(currentDate);
