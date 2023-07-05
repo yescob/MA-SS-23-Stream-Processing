@@ -82,3 +82,10 @@ and a reload of the stream processing application will be triggered upon the nex
 docker-compose stop <servicename>
 docker-compose up --build -d
 ```
+
+# Diagram Documetation
+
+For documentation reasons we have created Diagrams with structurizer. 
+To view these diagrams, the docker compose file in `kafka-quarkus-stream-processing/diagrams/docker-compose.yaml` needs to be executed.
+
+When this file is running, the application can be accessed on `localhost:8091`.
